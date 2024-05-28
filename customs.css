@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+
+
+    background-color: #505D6E;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url("temporary-background.png");
+    min-height: 100%;
+    background-size: cover;
+
+
+}
+
+@media (max-width: 1920px) {
+    body {
+      background-image: url("temporary-background.png");
+    }
+  }
+  
+  @media (max-width: 500px) {
+    body {
+      background-image: url("temporary-background.png");
+    }
+  }
+
+
+.centerbox{
+    /*Size of the center box and centering format*/
+    width: 25rem;
+    padding: 2.5rem;
+
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+    color:aliceblue;
+    
+    /*Color and font adjusment*/
+    background: rgba(50, 40, 100, .5);
+    font-family: 'Century Gothic',sans-serif;
+
+    border: 2px solid;
+    border-color: lightcyan;
+
+    /* animation transition*/
+    opacity: 0;
+    animation: fadeInUp 1s ease-out; 
+    opacity: 1;
+
+}
+
+/* animation transition*/
+@keyframes fadeInUp{
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+}
+
+.centerbox-img{
+    /*Circle-shaped profile picture*/
+    border-radius: 100%;
+}
+
+.centerbox li{
+    display: block;
+    
+}
+
+.centerbox ul{
+    /*Get rid of the bullet-points*/
+    list-style: none;
+}
+
+.centerbox ul li{
+    margin-bottom: 0.625rem;
+}
+
+.centerbox button{
+    padding-top: 1.063rem;
+    padding-bottom: 1.063rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    text-align: center;
+
+    /*Button size adjustment*/
+    width: 18.75rem;
+
+    margin: auto;
+    border-radius: 0.75rem;
+    border: none;
+
+
+    /*Maintaining button alignment*/
+    margin-right: 1.563rem;
+    
+
+    /*Color and style*/
+    background: #37286480;
+    font-family: 'Century Gothic',sans-serif;
+    color:aliceblue;
+    
+    /*button effect*/
+    transition-duration: 0.45s;
+
+}
+
+.centerbox button:hover{
+  background-color:#50509180;  
+  color: #37286480;
+  font-family: 'Century Gothic',sans-serif;
+  color: aliceblue;
+}
+
+/* The second set of buttons*/
+
+.secondlist li{
+    display: inline-block;
+
+}
+
+.secondlist ul{
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    
+    text-align: center;
+}
+
+.secondlist ul li{
+    margin: 0;
+    padding: 0;
+
+    margin-right: 0.625rem;
+}
+
+.secondlist button{
+
+    padding-top: 0.313rem;
+    padding-bottom: 0.313rem;
+    padding-left: 0.313rem;
+    padding-right: 0.313rem;
+
+    margin: auto;
+
+    width: 3.125rem;
+
+    border-radius: 0.75rem;
+    border: none;
+    background: #37286480;
+    
+    /*button effect*/
+    transition-duration: 0.45s;
+}
+
+.secondlist .fa-github {
+    color: aliceblue;
+}
+
+.secondlist .fa-linkedin{
+    color: aliceblue;
+}
