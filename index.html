@@ -24,15 +24,80 @@
             <li><a href= aboutme.html><button style="font-size:17px"><i>About Me</i></button></a></li>
             <li><a href= writtenworks.html><button style="font-size:17px"><i>Written Works</i></button></a></li>
             <li><a href= artworks.html><button style="font-size:17px"><i>Artworks</i></button></a></li>
+            <li><a href= ><button style="font-size:17px"><i>Personal Projects</i></button></a></li>
 
             <div class = "secondlist">
                     <ul>
                         <li><button style="font-size:30px" class="Github"><a href="https://github.com/rp1177" class="fa fa-github"></a></button></li>
-                        <li><button style="font-size:30px"><a href="https://www.linkedin.com/in/riddhi-p-b72a2a2ab/" class="fa fa-linkedin"></a></button></li>
+                        <li><button style="font-size:30px" class="linkedin"><a href="https://www.linkedin.com/in/riddhi-p-b72a2a2ab/" class="fa fa-linkedin"></a></button></li>
+                        <li><button style="font-size:28px" class="contact" type="button" onclick="openPopUp()">&#9993;</button></li>
                 
                     </ul>
+
+                    <div class="popup" id="popup">
+                        <button type="Close" style="font-size:10px" class="closebutton" onclick="closePopUp()">X</button>
+                        <!--Using Formspree since github pages is a static website and can't handle dynamic server side stuff. Also provides re-captchas to prevent spam.-->
+                        <form action="https://formspree.io/f/xgegbjdw" method="POST">
+
+                            <h2>Contact Me</h2>
+
+                            <label for="name">Name:
+                                <input type="text" class="flname" name="name" value="" placeholder="Enter your Name"><br><br>
+                            </label>
+                            <label for="email">Email: 
+                                <input type="text" class="email" name="emailAd" value="" placeholder="Enter your email"><br><br>
+                            </label>
+
+                            <textarea id="message" class="message" name="textmessage"  value="" placeholder="Enter your message" rows="4" cols="50"></textarea><br><br>
+
+                            <button type="submitform" class="submit">Submit</button>
+                        </form>
+                    </div>
             </div>
         </div>
+
+        <!--Making sure contact form shows up when message button is pressed-->
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopUp(){
+                popup.classList.add("open-popup");
+            }
+
+            function closePopUp(){
+                popup.classList.remove("open-popup");
+            }
+
+            function infoCheck(flname, email, message){
+                if (flname.value == "" || email.value == "" || message.value==""){
+                    alert("Name, Email, and Message is blank.");
+                    return false
+                } else {
+                    return true
+                }
+            }
+
+            document.querySelector('form').addEventListener('submit', function(event){
+
+                event.preventDefault();
+
+                var flname = document.querySelector('.flname');
+                var email = document.querySelector('.email');
+                var message = document.querySelector('#message');
+                
+                //If infocheck returns false, prevent the message submission
+                if(!infoCheck(flname, email, message)) {
+                    return;
+                }
+
+                //If everything passes then allow the form to submit
+                event.target.submit();
+
+            });
+
+
+        </script>
+
 
     </body>
 </html>

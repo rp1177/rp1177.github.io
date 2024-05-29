@@ -122,6 +122,7 @@ body{
 
 .secondlist li{
     display: inline-block;
+    align-items: center;
 
 }
 
@@ -166,4 +167,83 @@ body{
 
 .secondlist .fa-linkedin{
     color: aliceblue;
+}
+
+
+
+.popup{
+    width: 25rem;
+    height: 25rem;
+    background-color: rgba(67, 58, 117, 0.95);
+    border-radius: 0.375rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 1.875rem 1.875rem;
+    visibility: hidden;
+    transition: transform 0.2s, top 0.2s;
+}
+
+.popup input{
+
+    width: 20.00rem;
+    height: 1.50rem;
+    margin: auto;
+    text-align: left;
+
+    border-radius: 0.75rem;
+    border: none;
+    text-indent: 5%;
+
+    /*Color and style*/
+    background: #37286480;
+    font-family: 'Century Gothic',sans-serif;
+    color:aliceblue;
+        
+    /*button effect*/
+    transition-duration: 0.45s;
+
+}
+
+.popup textarea{
+    width: 25.00rem;
+    height: 10.00rem;
+    resize: none;
+
+    border-radius: 0.75rem;
+    border: none;
+    text-align: justify;
+
+    text-indent: 5%;
+    
+    /*Color and style*/
+    background: #37286480;
+    font-family: 'Century Gothic',sans-serif;
+    color:aliceblue;
+    
+
+    /*button effect*/
+    transition-duration: 0.45s;
+
+}
+
+.popup ::placeholder{
+    color: aliceblue;
+    opacity: 0.4; 
+}
+
+.popup button.closebutton{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
 }
