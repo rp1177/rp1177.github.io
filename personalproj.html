@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--Personal projects page-->
+<html lang="en">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.3, minimum-scale=0.1">
+    <head>
+        <meta charset="utf-8">
+        <title>Riddhi Patel's Portfolio Page</title>
+        <link rel="stylesheet" href="projcustom.css">
+        
+    </head>
+
+    <body>
+        <div class="personalprojectspage">
+        
+            <i><h1 style="font-size:60px">Personal Projects</h1></i>
+
+            <p1 style="font-size:20px">
+                Right now, I’m pouring my time and coding passion into projects that revolve around Data Analysis and Data Science fundamentals. I pick projects based on the intriguing questions I want to answer or problems I’m excited to solve. As I dive into these projects, I’m not just expanding my knowledge, but also turning my findings into something tangible - like a deployable app or a web interface. Below, you’ll find a list of my projects along with their respective repositories. If they’re ready for the world to see, I’ve included a website link!
+            </p1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+           <left> <i><h1 style="font-size:20px">MyAniMate: A hybrid weighted recommendation system</h1></i></left>
+            <p1 style="font-size:15px">
+                After getting the hang of content and collaborative filtering, I thought it’d be cool to build my own anime recommendation system. Crunchyroll’s slow UI and Netflix’s limited anime options were kind of a bummer. So, I made MyAniMate to find new animes for myself.  However, the system has a limitation where the dataset only expands up to 2023 user ratings and animes. 
+            </p1>
+            <br></br>
+            <ul style="line-height:160%">
+                <li><b>Notebook:</b><a href="https://github.com/rp1177/AnimeRecommendation/blob/main/AnimeRecSystem.ipynb">Click here</a></li> 
+                <li><b>Language used:</b> Python/Jupyter Notebook</li> 
+                <li><b>Libraries used:</b> Fuzzywuzzy, Ipyplot, Pandas, Matplotlib, Nltk, Numpy, and Scikit-learn</li>
+                <li><b>Development Process:</b>
+                    <ul style="line-height:170%">
+                        <li>1.) Downloaded a dataset from Kaggle and loaded it into a DataFrame.</li>
+                        <li>2.) Initiated data cleaning and preprocessing, focusing on handling null values and ensuring data quality.</li>
+                        <li>3.) Used a heatmap to visualize missing values, decided to ignore them to avoid introducing biases.</li>
+                        <li>4.) Performed feature engineering by merging genres, synopsis, and TV-ratings into a ‘tags’ column using NLP techniques.</li>
+                        <li>5.) For content based filtering, calculated similarity scores using TF-IDF and cosine similarity.</li>
+                        <li>6.) For collaborative based filtering, developed a popularity metric column using weighted overall scores and number of favorites.</li>
+                        <li>7.) Combined the average 'tags' content score with popularity score, multiplied by the weights.</li>
+                        <li>8.) Implemented a user-input interface allowing user to give an input list of favorite animes which finds the average score and frequent genre.</li>
+                        <li>9.) Subtract user's average score against the rest of the scores. The top 30 smallest difference in scores will be recommended to user.</li>
+                    </ul>
+
+                    <li><b>Future Developments:</b> Currently testing different weights and use cases of the recommendation system. In addition to that, a website is still under construction.
+                </li>
+            </ul>
+            
+            
+        </div>
+    </body>
