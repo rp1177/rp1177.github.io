@@ -48,6 +48,36 @@
                     <li><b>Future Developments:</b> Currently testing different weights and use cases of the recommendation system. In addition to that, a website is still under construction.
                 </li>
             </ul>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <left> <i><h1 style="font-size:20px">Notifications Discord Bot</h1></i></left>
+            <p1 style="font-size:15px">
+                I created the Notifications discord bot as a means to learn RESTful API communication and integration practices. However, I also wanted to try and solve an everyday issue I have, which was emails. I thought this could be a way I can efficiently organize my emails faster while using an application I am always actively checking. By allowing my bot to communicate with the Gmail API, I use base64 decoding and BeautifulSoup webscraping libraries to extract my most unread emails every couple of minutes and send them as embeds in Discord within a specified channel. From there I can be able to actively communicate with my inbox with ease. More developments are yet to come.
+            </p1>
+            <br></br>
+            <ul style="line-height:160%">
+                <li><b>Code:</b><a href="https://github.com/rp1177/Miscellaneous/tree/main/Notifications_Bot">Click here</a></li> 
+                <li><b>Language used:</b> Python</li> 
+                <li><b>Libraries used:</b>BeautifulSoup, base64, discord.py, googleapiclient, re</li>
+                <li><b>Development Process:</b>
+                    <ul style="line-height:170%">
+                        <li>1.) Create the Bot: Use the Discord Developer portal to create a bot and set the necessary permissions. </li>
+                        <li>2.) Connect to Discord API: Use discord.py to authenticate and connect the bot to the Discord API.</li>
+                        <li>3.) Set Up Google API: Authenticate with Google and enable the Gmail API. Set up the necessary scopes and permissions.</li>
+                        <li>4.) Fetch Emails: Use the Gmail API to get the most recent unread emails from your inbox.</li>
+                        <li>5.) Process Emails: Use BeautifulSoup and base64 to extract and decode the email details (thread_id, message_content, date/time). Store this information in a list.</li>
+                        <li>6.) Create Discord Embeds: Set up a task loop that runs every few minutes to check the list of emails, scrape the email data using BeautifulSoup with base64 decoding, and create a new Discord embed for each email. The bot will post these embeds in a specified channel with options to mark the email as read or delete it.</li>
+                        <li>7.) Host the Bot: Upload the bot code to a hosting service.</li>
+                        
+                    </ul>
+
+                    <li><b>Future Developments:</b> Add more commands to efficiently communicate with my inbox using Gmail API. Additionally, allow the bot to notify me of data breaches that may impact me.
+                </li>
+            </ul>
             
             
         </div>
